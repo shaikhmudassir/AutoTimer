@@ -35,9 +35,9 @@ def get_active_window():
         _active_window_name = (NSWorkspace.sharedWorkspace()
                                .activeApplication()['NSApplicationName'])
     else:
-        print("sys.platform={platform} is not supported."
-              .format(platform=sys.platform))
-        print(sys.version)
+        pass
+        #print("sys.platform={platform} is not supported." .format(platform=sys.platform))
+        #print(sys.version)
     return _active_window_name
 
 
@@ -54,15 +54,16 @@ def get_chrome_url():
         results, err = s.executeAndReturnError_(None)
         return results.stringValue()
     else:
-        print("sys.platform={platform} is not supported."
-              .format(platform=sys.platform))
-        print(sys.version)
+        pass
+        #print("sys.platform={platform} is not supported.".format(platform=sys.platform))
+        #print(sys.version)
     return _active_window_name
 
 try:
     activeList.initialize_me()
 except Exception:
-    print('No json')
+    pass
+    #print('No json')
 
 
 try:
@@ -79,7 +80,7 @@ try:
 
         
         if active_window_name != new_window_name:
-            print(active_window_name)
+            #print(active_window_name)
             activity_name = active_window_name
 
             if not first_time:
