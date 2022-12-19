@@ -6,5 +6,7 @@ def back():
 def gui():
     import GUI
 
+with open('activities.json', 'w') as f:
+    pass
 Thread(target = back).start() 
 Thread(target = gui).start()
